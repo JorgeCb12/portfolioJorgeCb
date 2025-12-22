@@ -66,10 +66,10 @@ const AllProjects = () => {
           </Link>
 
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Mis Proyectos <span className="text-indigo-500">.</span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 mt-5">
+              Mis Proyectos
             </h1>
-            <p className="text-gray-400 max-w-2xl text-lg">
+            <p className="text-gray-400 max-w-3xl text-xl">
               Una colección de soluciones que he construido. Desde aplicaciones
               web complejas hasta experimentos de interfaz.
             </p>
@@ -86,9 +86,9 @@ const AllProjects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-120"
                 />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
                   <a
                     href={project.github}
                     className="p-3 bg-white text-black rounded-full hover:scale-110 transition-transform"

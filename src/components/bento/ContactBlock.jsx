@@ -24,9 +24,7 @@ const ContactBlock = ({ className }) => {
   return (
     <GlassCard className={`flex flex-col justify-between p-6 ${className}`}>
       <div>
-        <h3 className="text-xl font-bold text-white mb-1">
-          ¿Trabajamos juntos?
-        </h3>
+        <h3 className="text-xl font-bold text-white mb-1">¡Contáctame!</h3>
         <p className="text-gray-400 text-xs">
           Envíame un mensaje directo o copia mi correo.
         </p>
@@ -36,7 +34,7 @@ const ContactBlock = ({ className }) => {
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Hola, tengo un proyecto..."
+          placeholder="¡Hola! Me gustaría conversar sobre oportunidades de desarrollo de software..."
           className="w-full h-24 bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all resize-none"
         />
 

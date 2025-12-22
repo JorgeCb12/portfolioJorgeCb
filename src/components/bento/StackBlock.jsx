@@ -8,17 +8,58 @@ import {
   SiGit,
   SiFigma,
   SiNodedotjs,
+  SiZebpay,
 } from "react-icons/si";
 
 const stackData = [
-  { name: "React", icon: <SiReact />, color: "text-cyan-400" },
-  { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-400" },
-  { name: "TypeScript", icon: <SiTypescript />, color: "text-blue-500" },
-  { name: "Tailwind", icon: <SiTailwindcss />, color: "text-cyan-300" },
-  { name: "Node.js", icon: <SiNodedotjs />, color: "text-green-500" },
-  { name: "Vite", icon: <SiVite />, color: "text-purple-400" },
-  { name: "Git", icon: <SiGit />, color: "text-orange-500" },
-  { name: "Figma", icon: <SiFigma />, color: "text-pink-400" },
+  {
+    name: "React",
+    icon: <SiReact size={24} />,
+    color: "text-cyan-400",
+    hoverBg: "hover:bg-sky-400/10",
+  },
+  {
+    name: "JavaScript",
+    icon: <SiJavascript size={24} />,
+    color: "text-yellow-400",
+    hoverBg: "hover:bg-amber-300/10",
+  },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript size={24} />,
+    color: "text-blue-500",
+    hoverBg: "hover:bg-blue-500/10",
+  },
+  {
+    name: "Tailwind",
+    icon: <SiTailwindcss size={24} />,
+    color: "text-cyan-300",
+    hoverBg: "hover:bg-cyan-300/10",
+  },
+  {
+    name: "Node.js",
+    icon: <SiNodedotjs size={24} />,
+    color: "text-green-500",
+    hoverBg: "hover:bg-green-500/10",
+  },
+  {
+    name: "Vite",
+    icon: <SiVite size={24} />,
+    color: "text-purple-400",
+    hoverBg: "hover:bg-purple-400/10",
+  },
+  {
+    name: "Git",
+    icon: <SiGit size={24} />,
+    color: "text-orange-500",
+    hoverBg: "hover:bg-orange-500/10",
+  },
+  {
+    name: "Figma",
+    icon: <SiFigma size={24} />,
+    color: "text-pink-400",
+    hoverBg: "hover:bg-pink-400/10",
+  },
 ];
 
 const StackBlock = ({ className }) => {
@@ -26,7 +67,7 @@ const StackBlock = ({ className }) => {
     <GlassCard className={`flex flex-col gap-4 pt-12 ${className}`}>
       <div className="flex items-center gap-2 mb-5">
         <h3 className="text-lg font-bold text-gray-200">
-          Tecnologías utilizadas
+          Habilidades Técnicas
         </h3>
       </div>
 
@@ -34,14 +75,15 @@ const StackBlock = ({ className }) => {
         {stackData.map((tech, index) => (
           <div
             key={index}
-            className="
-                        group 
+            className={`group 
                         flex items-center gap-2 
                         p-4 rounded-lg 
                         bg-white/5 border border-white/10 
-                        hover:bg-white/10 hover:border-white/30 
-                        transition-all duration-300 cursor-default
-                    "
+                        ${tech.hoverBg} hover:border-white/30
+                        `}
+            transition-all
+            duration-300
+            cursor-default
           >
             <span
               className={`text-lg ${tech.color} transition-transform group-hover:scale-110`}
@@ -49,7 +91,7 @@ const StackBlock = ({ className }) => {
               {tech.icon}
             </span>
 
-            <span className="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">
+            <span className="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
               {tech.name}
             </span>
           </div>

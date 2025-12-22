@@ -16,12 +16,12 @@ const Home = () => {
 
         <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-cyan-500/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
 
-        <div className="w-full max-w-8xl grid grid-cols-3 gap-2 relative z-10">
+        <div className="w-full max-w-7xl grid grid-cols-3 gap-2 relative z-10">
           <HeroBlock className="col-span-1 row-span-2 p-6" />
 
           <ProjectsBlock className="col-span-1 row-span-1 p-6" />
 
-          <StackBlock className="p-6" />
+          <StackBlock className="col-span-1 row-span-1 p-6" />
 
           <AboutMeBlock className="col-span-1 row-span-3 p-6" />
 

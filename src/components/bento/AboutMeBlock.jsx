@@ -7,7 +7,7 @@ const AboutMeBlock = ({ className }) => {
       className={`flex flex-col justify-center gap-6 p-6 ${className}`}
     >
       <div className="flex items-center gap-3">
-        <div className="p-2 bg-indigo-500/20 rounded-lg text-indigo-300">
+        <div className="p-2 bg-blue-500/20 rounded-lg text-blue-400">
           <FaUser size={20} />
         </div>
         <h3 className="text-xl font-bold text-white">Sobre mí</h3>
@@ -19,8 +19,8 @@ const AboutMeBlock = ({ className }) => {
             Desarrollador de Software
           </span>{" "}
           con experiencia práctica creando soluciones digitales. Mi enfoque
-          combina la <span className="text-indigo-400">lógica robusta</span>{" "}
-          (Java, SQL) con interfaces{" "}
+          combina la <span className="text-blue-400">lógica robusta</span>{" "}
+          (Node.js, SQL) con interfaces{" "}
           <span className="text-purple-400">modernas y atractivas</span> (React,
           Tailwind).
         </p>

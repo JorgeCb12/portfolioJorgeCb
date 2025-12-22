@@ -6,7 +6,7 @@ import FotoPerfil from "../../assets/img/FotoPerfil.webp";
 const HeroBlock = ({ className }) => {
   return (
     <GlassCard className={`flex flex-col justify-between h-full ${className}`}>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-2">
         <div className="relative w-32 h-32 mx-auto md:mx-0">
           <img
             src={FotoPerfil}
@@ -19,7 +19,7 @@ const HeroBlock = ({ className }) => {
         </div>
 
         <div>
-          <h1 className="text-3xl font-bold text-white tracking-tight">
+          <h1 className="text-2xl font-bold text-white tracking-tight">
             Jorge CB
           </h1>
           <p className="text-gray-400 font-medium text-base">
@@ -33,14 +33,14 @@ const HeroBlock = ({ className }) => {
       </div>
 
       <div className="py-4">
-        <p className="text-gray-300 text-base leading-relaxed">
-          <span className="text-blue-700">Transformador</span> de ideas en
-          interfaces increíbles, creando experiencias web rápidas y visualmente
-          impactantes
+        <p className="text-gray-300 text-sm leading-relaxed">
+          <span className="text-blue-700 font-bold">Transformador</span> de
+          ideas en interfaces increíbles, creando experiencias web rápidas y
+          visualmente impactantes
         </p>
 
-        <button className="mt-4 text-base px-4 py-2 bg-white/10 border border-white/20 hover:bg-blue-700 text-white rounded-lg transition-colors">
-          Download <span className="font-medium">CV</span>
+        <button className="mt-4 text-sm px-4 py-2 bg-white/10 border border-white/20 hover:bg-blue-700 text-white rounded-lg transition-colors">
+          Download CV
         </button>
       </div>
 
@@ -51,7 +51,7 @@ const HeroBlock = ({ className }) => {
           rel="noopener noreferrer"
           className="p-2 bg-white/5 rounded-lg hover:bg-white/20 transition-colors border border-white/10 text-gray-400 hover:text-white"
         >
-          <FaGithub size={20} />
+          <FaGithub size={18} />
         </a>
 
         <a
@@ -60,14 +60,14 @@ const HeroBlock = ({ className }) => {
           rel="noopener noreferrer"
           className="p-2 bg-white/5 rounded-lg hover:bg-blue-600/20 hover:border-blue-500/50 hover:text-blue-400 transition-colors border border-white/10 text-gray-400"
         >
-          <FaLinkedin size={20} />
+          <FaLinkedin size={18} />
         </a>
 
         <a
-          href="mailto:tuemail@gmail.com"
-          className="p-2 bg-white/5 rounded-lg hover:bg-white/20 transition-colors border border-white/10 text-gray-400 hover:text-white"
+          href="mailto:jorgeluiscorralesbarraza272@gmail.com"
+          className="p-2 bg-white/5 rounded-lg hover:bg-red-600/20 hover:border-red-500/50 hover:text-red-400 transition-colors border border-white/10 text-gray-400"
         >
-          <LuMail size={20} />
+          <LuMail size={18} />
         </a>
         <a
           href="https://wa.me/tu-numero"
@@ -75,7 +75,7 @@ const HeroBlock = ({ className }) => {
           rel="noopener noreferrer"
           className="p-2 bg-white/5 rounded-lg hover:bg-green-600/20 hover:border-green-500/50 hover:text-green-400 transition-colors border border-white/10 text-gray-400"
         >
-          <FaWhatsapp size={20} />
+          <FaWhatsapp size={18} />
         </a>
       </div>
     </GlassCard>

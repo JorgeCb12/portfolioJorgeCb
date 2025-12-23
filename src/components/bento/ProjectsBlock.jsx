@@ -8,7 +8,7 @@ const projects = [
     title: "My Portfolio",
     desc: "Portafolio personal responsivo creado con React, Tailwind y Vite.",
     tags: ["React.js", "Tailwind", "Vite"],
-    link: "#",
+    link: "https://portfolio-jorgecb.vercel.app/",
     github: "https://github.com/JorgeCb12/portfolioJorgeCb",
     image: portfolioImg,
   },

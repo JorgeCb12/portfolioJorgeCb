@@ -1,7 +1,7 @@
 import GlassCard from "../UI/GlassCard";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { LuMail, LuMapPin } from "react-icons/lu";
-import FotoPerfil from "../../assets/img/FotoPerfil.webp";
+import FotoPerfil from "/public/img/FotoPerfil.webp";
 
 const HeroBlock = ({ className }) => {
   return (
@@ -40,13 +40,15 @@ const HeroBlock = ({ className }) => {
         </p>
 
         <button className="mt-4 text-sm px-4 py-2 bg-white/10 border border-white/20 hover:bg-blue-700 text-white rounded-lg transition-colors">
-          Download CV
+          <a href="/pdf/CvJorge.pdf" download>
+            Download CV
+          </a>
         </button>
       </div>
 
       <div className="flex gap-3 mt-auto">
         <a
-          href="https://github.com/jorcb"
+          href="https://github.com/JorgeCb12"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 bg-white/5 rounded-lg hover:bg-white/20 transition-colors border border-white/10 text-gray-400 hover:text-white"
@@ -55,7 +57,7 @@ const HeroBlock = ({ className }) => {
         </a>
 
         <a
-          href="https://linkedin.com/in/tu-usuario"
+          href="https://www.linkedin.com/in/jorge-corrales-a90992330/"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 bg-white/5 rounded-lg hover:bg-blue-600/20 hover:border-blue-500/50 hover:text-blue-400 transition-colors border border-white/10 text-gray-400"
@@ -70,7 +72,7 @@ const HeroBlock = ({ className }) => {
           <LuMail size={18} />
         </a>
         <a
-          href="https://wa.me/tu-numero"
+          href="https://wa.me/3245487126"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 bg-white/5 rounded-lg hover:bg-green-600/20 hover:border-green-500/50 hover:text-green-400 transition-colors border border-white/10 text-gray-400"

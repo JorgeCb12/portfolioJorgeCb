@@ -57,7 +57,7 @@ const ContactBlock = ({ className }) => {
           <span className="text-[10px] text-gray-400 uppercase tracking-wider">
             Email
           </span>
-          <span className="text-[12px] font-mono text-gray-200 group-hover:text-white transition-colors">
+          <span className="text-[10px] font-mono text-gray-200 group-hover:text-white transition-colors">
             {email}
           </span>
         </div>

@@ -5,7 +5,7 @@ import portfolioImg from "../../assets/img/portfolioImg.png";
 
 const projects = [
   {
-    title: "My Portfolio (Bento Grid)",
+    title: "My Portfolio",
     desc: "Portafolio personal responsivo creado con React, Tailwind y Vite.",
     tags: ["React.js", "Tailwind", "Vite"],
     link: "#",
@@ -76,11 +76,11 @@ const ProjectsBlock = ({ className }) => {
                 </div>
               </div>
 
-              <div className="flex gap-2 mt-2 -ml-1 ">
+              <div className="flex gap-2 mt-2 -ml-1">
                 {project.tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="text-[10px] px-2 py-1 bg-black/50 backdrop-blur-sm rounded-full text-gray-300 border border-white/5"
+                    className="text-[10px] px-2 py-1 bg-white/20 backdrop-blur-sm rounded-full text-gray-300 border border-white/5"
                   >
                     {tag}
                   </span>

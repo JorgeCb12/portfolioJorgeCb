@@ -35,7 +35,7 @@ const ContactBlock = ({ className }) => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="¡Hola! Me gustaría conversar sobre oportunidades de desarrollo de software..."
-          className="w-full h-24 bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all resize-none"
+          className="w-full h-24 bg-white/5 border border-white/10 rounded-xl p-3 text-[12px] text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all resize-none"
         />
 
         <button
@@ -57,7 +57,7 @@ const ContactBlock = ({ className }) => {
           <span className="text-[10px] text-gray-400 uppercase tracking-wider">
             Email
           </span>
-          <span className="text-sm font-mono text-gray-200 group-hover:text-white transition-colors">
+          <span className="text-[12px] font-mono text-gray-200 group-hover:text-white transition-colors">
             {email}
           </span>
         </div>

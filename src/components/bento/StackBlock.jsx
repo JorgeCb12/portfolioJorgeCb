@@ -14,49 +14,49 @@ import {
 const stackData = [
   {
     name: "React",
-    icon: <SiReact size={24} />,
+    icon: <SiReact size={20} />,
     color: "text-cyan-400",
     hoverBg: "hover:bg-sky-400/10",
   },
   {
     name: "JavaScript",
-    icon: <SiJavascript size={24} />,
+    icon: <SiJavascript size={20} />,
     color: "text-yellow-400",
     hoverBg: "hover:bg-amber-300/10",
   },
   {
     name: "TypeScript",
-    icon: <SiTypescript size={24} />,
+    icon: <SiTypescript size={20} />,
     color: "text-blue-500",
     hoverBg: "hover:bg-blue-500/10",
   },
   {
     name: "Tailwind",
-    icon: <SiTailwindcss size={24} />,
+    icon: <SiTailwindcss size={20} />,
     color: "text-cyan-300",
     hoverBg: "hover:bg-cyan-300/10",
   },
   {
     name: "Node.js",
-    icon: <SiNodedotjs size={24} />,
+    icon: <SiNodedotjs size={20} />,
     color: "text-green-500",
     hoverBg: "hover:bg-green-500/10",
   },
   {
     name: "Vite",
-    icon: <SiVite size={24} />,
+    icon: <SiVite size={20} />,
     color: "text-purple-400",
     hoverBg: "hover:bg-purple-400/10",
   },
   {
     name: "Git",
-    icon: <SiGit size={24} />,
+    icon: <SiGit size={20} />,
     color: "text-orange-500",
     hoverBg: "hover:bg-orange-500/10",
   },
   {
     name: "Figma",
-    icon: <SiFigma size={24} />,
+    icon: <SiFigma size={20} />,
     color: "text-pink-400",
     hoverBg: "hover:bg-pink-400/10",
   },
@@ -65,19 +65,19 @@ const stackData = [
 const StackBlock = ({ className }) => {
   return (
     <GlassCard className={`flex flex-col gap-4 pt-12 ${className}`}>
-      <div className="flex items-center gap-2 mb-5">
+      <div className="flex items-center gap-2 mb-8">
         <h3 className="text-lg font-bold text-gray-200">
           Habilidades Técnicas
         </h3>
       </div>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 gap-4">
         {stackData.map((tech, index) => (
           <div
             key={index}
             className={`group 
                         flex items-center gap-2 
-                        p-4 rounded-lg 
+                        p-2 rounded-lg 
                         bg-white/5 border border-white/10 
                         ${tech.hoverBg} hover:border-white/30
                         `}
@@ -91,7 +91,7 @@ const StackBlock = ({ className }) => {
               {tech.icon}
             </span>
 
-            <span className="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
+            <span className="text-[12px] font-medium text-gray-400 group-hover:text-white transition-colors">
               {tech.name}
             </span>
           </div>

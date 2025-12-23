@@ -1,25 +1,24 @@
 import GlassCard from "../UI/GlassCard";
 import { FiExternalLink, FiGithub, FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import portfolioImg from "../../assets/img/portfolioImg.png";
 
 const projects = [
   {
-    title: "E-Commerce Dashboard",
-    desc: "Panel de administración con gráficos y tablas de ventas.",
-    tags: ["React.js", "Tailwind", "node.js"],
+    title: "My Portfolio (Bento Grid)",
+    desc: "Portafolio personal responsivo creado con React, Tailwind y Vite.",
+    tags: ["React.js", "Tailwind", "Vite"],
     link: "#",
-    github: "#",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+    github: "https://github.com/JorgeCb12/portfolioJorgeCb",
+    image: portfolioImg,
   },
   {
-    title: "Travel App UI",
-    desc: "Landing page animada para agencia de viajes.",
+    title: "Coming Soon...",
+    desc: "Cocinando algo interesante con API Rest.",
     tags: ["Next.js", "Framer Motion"],
     link: "#",
     github: "#",
-    image:
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2621&auto=format&fit=crop",
+    image: portfolioImg,
   },
 ];
 

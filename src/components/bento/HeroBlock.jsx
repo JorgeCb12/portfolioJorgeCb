@@ -1,15 +1,15 @@
 import GlassCard from "../UI/GlassCard";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { LuMail, LuMapPin } from "react-icons/lu";
-import FotoPerfil from "/public/img/FotoPerfil.webp";
+
 
 const HeroBlock = ({ className }) => {
   return (
     <GlassCard className={`flex flex-col justify-between h-full ${className}`}>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-1">
         <div className="relative w-32 h-32 mx-auto md:mx-0">
           <img
-            src={FotoPerfil}
+            src='/FotoPerfil.webp'
             alt="Jorge CB"
             className="w-full h-full rounded-full object-cover border-2 border-white/20 shadow-lg"
           />
@@ -40,7 +40,7 @@ const HeroBlock = ({ className }) => {
         </p>
 
         <button className="mt-4 text-sm px-4 py-2 bg-white/10 border border-white/20 hover:bg-blue-700 text-white rounded-lg transition-colors">
-          <a href="/pdf/CvJorge.pdf" download>
+          <a href="/CvJorge.pdf" download>
             Download CV
           </a>
         </button>

@@ -17,7 +17,7 @@ const projects = [
   {
     title: "InvoiceFlow SaaS",
     desc: "Landing page de alta conversión para Fintech. Diseño Dark Mode, Bento Grid y animaciones Framer Motion.",
-    tags: ["React", "Tailwind", "Framer Motion", "Vite"],
+    tags: ["React", "Tailwind", "F. Motion"],
     link: "https://invoice-flow-landing.vercel.app",
     github: "https://github.com/JorgeCb12/invoice-flow-landing",
     image: invoiceFlow,
@@ -62,7 +62,7 @@ const ProjectsBlock = ({ className }) => {
               <div className="absolute bottom-0 left-0 w-full p-4">
                 <div className="flex justify-between items-end gap-2">
                   <div className="flex-1 relative h-16 flex flex-col justify-end overflow-hidden">
-                    <h4 className="text-white font-bold text-lg drop-shadow-md mb-1">
+                    <h4 className="text-white font-bold text-lg drop-shadow-md mb-3">
                       {project.title}
                     </h4>
 
@@ -77,7 +77,7 @@ const ProjectsBlock = ({ className }) => {
                       ))}
                     </div>
 
-                    <p className="text-gray-300 text-xs mt-1 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 line-clamp-2">
+                    <p className="text-gray-300 text-xs -mt-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 line-clamp-2">
                       {project.desc}
                     </p>
                   </div>

@@ -4,13 +4,13 @@ import ProjectsBlock from "../components/bento/ProjectsBlock";
 import StackBlock from "../components/bento/StackBlock";
 import ExperienceBlock from "../components/bento/ExperienceBlock";
 import ContactBlock from "../components/bento/ContactBlock";
-import { BoxesCore } from "../components/ui/BackgroundBoxes";
+import { BackgroundBoxes } from "../components/ui/BackgroundBoxes";
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-slate-950 relative w-full overflow-hidden flex flex-col items-center justify-center rounded-lg">
       <div className="absolute hidden md:block inset-0 w-full h-full bg-slate-950 z-0 overflow-hidden">
-        <BoxesCore />
+        <BackgroundBoxes />
       </div>
 
       <div className="grid grid-cols-1 container mx-auto xl:max-w-[1600px] lg:max-w-[1200px] md:grid-cols-2 lg:grid-cols-12 xl:grid-cols-12 gap-4 relative z-30 p-4 md:p-8 pointer-events-none">

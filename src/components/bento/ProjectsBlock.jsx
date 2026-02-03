@@ -1,6 +1,6 @@
 import GlassCard from "../ui/GlassCard";
 import Tilt from "react-parallax-tilt";
-import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { FiExternalLink, FiGithub, FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import portfolioImg from "../../assets/img/portfolioImg.png";
 import invoiceFlow from "../../assets/img/invoiceFlow.png";
@@ -31,9 +31,10 @@ const ProjectsBlock = ({ className }) => {
         <h3 className="text-xl font-bold text-gray-200">Proyectos</h3>
         <Link
           to="/projects"
-          className="text-xs text-gray-400 hover:text-white transition-colors"
+          className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1"
         >
-          Ver mas →
+          Ver mas
+          <FiArrowRight size={16} />
         </Link>
       </div>
 

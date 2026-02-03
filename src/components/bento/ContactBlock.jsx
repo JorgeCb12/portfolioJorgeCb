@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GlassCard from "../UI/GlassCard";
+import GlassCard from "../ui/GlassCard";
 import { FiSend, FiCopy, FiCheck } from "react-icons/fi";
 
 const ContactBlock = ({ className }) => {
@@ -10,7 +10,7 @@ const ContactBlock = ({ className }) => {
   const handleSend = () => {
     if (!message) return;
     window.open(
-      `mailto:${email}?subject=Contacto desde Portafolio&body=${message}`
+      `mailto:${email}?subject=Contacto desde Portafolio&body=${message}`,
     );
     setMessage("");
   };

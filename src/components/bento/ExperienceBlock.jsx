@@ -1,4 +1,4 @@
-import GlassCard from "../UI/GlassCard";
+import GlassCard from "../ui/GlassCard";
 import { FaLaptopCode, FaHeadset, FaCalendarAlt } from "react-icons/fa";
 
 const Experience = ({ className }) => {

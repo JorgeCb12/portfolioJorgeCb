@@ -1,4 +1,4 @@
-import GlassCard from "../UI/GlassCard";
+import GlassCard from "../ui/GlassCard";
 import {
   SiReact,
   SiJavascript,
@@ -12,7 +12,6 @@ import {
   SiGithub,
   SiMysql,
   SiCanva,
-
 } from "react-icons/si";
 
 const stackData = [
@@ -53,7 +52,6 @@ const stackData = [
   {
     title: "Herramientas",
     item: [
-      
       {
         name: "Vite",
         icon: <SiVite size={16} />,
@@ -81,37 +79,37 @@ const stackData = [
     ],
   },
   {
-    title: 'Diseño',
+    title: "Diseño",
     item: [
       {
-        name: 'Figma',
+        name: "Figma",
         icon: <SiFigma size={16} />,
-        color: 'text-pink-500',
-        hoverBg: 'hover:bg-pink-500/10',
+        color: "text-pink-500",
+        hoverBg: "hover:bg-pink-500/10",
       },
       {
-        name: 'Canva',
+        name: "Canva",
         icon: <SiCanva size={16} />,
-        color: 'text-blue-600',
-        hoverBg: 'hover:bg-blue-600/10',
-      }
+        color: "text-blue-600",
+        hoverBg: "hover:bg-blue-600/10",
+      },
     ],
   },
   {
-    title: 'Backend',
+    title: "Backend",
     item: [
       {
-        name: 'Node.js',
+        name: "Node.js",
         icon: <SiNodedotjs size={16} />,
-        color: 'text-green-600',
-        hoverBg: 'hover:bg-green-600/10',
+        color: "text-green-600",
+        hoverBg: "hover:bg-green-600/10",
       },
       {
-        name: 'MySQL',
+        name: "MySQL",
         icon: <SiMysql size={16} />,
-        color: 'text-blue-600',
-        hoverBg: 'hover:bg-blue-600/10',
-      }
+        color: "text-blue-600",
+        hoverBg: "hover:bg-blue-600/10",
+      },
     ],
   },
 ];

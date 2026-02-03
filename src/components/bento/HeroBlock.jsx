@@ -1,15 +1,16 @@
-import GlassCard from "../UI/GlassCard";
+import GlassCard from "../ui/GlassCard";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { LuMail, LuMapPin } from "react-icons/lu";
 
-
 const HeroBlock = ({ className }) => {
   return (
-    <GlassCard className={`flex flex-col justify-between h-full ${className}`}>
-      <div className="flex flex-col gap-1">
-        <div className="relative w-32 h-32 mx-auto md:mx-0">
+    <GlassCard
+      className={`flex flex-col justify-between h-full w-fit ${className}`}
+    >
+      <div className="flex flex-col gap-1 w-fit">
+        <div className="relative w-32 h-32  mx-auto md:mx-0 ">
           <img
-            src='/FotoPerfil.webp'
+            src="/FotoPerfil.webp"
             alt="Jorge CB"
             className="w-full h-full rounded-full object-cover border-2 border-white/20 shadow-lg"
           />
@@ -34,7 +35,7 @@ const HeroBlock = ({ className }) => {
 
       <div className="py-4">
         <p className="text-gray-300 text-sm leading-relaxed">
-          <span className="text-blue-700 font-bold">Transformador</span> de
+          <span className="text-blue-700 font-bold ">Transformador</span> de
           ideas en interfaces increíbles, creando experiencias web rápidas y
           visualmente impactantes
         </p>
@@ -46,7 +47,7 @@ const HeroBlock = ({ className }) => {
         </button>
       </div>
 
-      <div className="flex gap-3 mt-auto">
+      <div className="flex gap-3 mt-auto w-fit">
         <a
           href="https://github.com/JorgeCb12"
           target="_blank"

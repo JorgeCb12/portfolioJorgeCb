@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaArrowLeft, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import GlassCard from "../components/UI/GlassCard";
+import GlassCard from "../components/ui/GlassCard";
+import invoiceFlow from "../assets/img/invoiceFlow.png";
 
 const allProjects = [
   {
@@ -16,15 +17,15 @@ const allProjects = [
   },
   {
     id: 2,
-    title: "Travel App Landing",
+    title: "InvoiceFlow SaaS",
     description:
-      "Landing page inmersiva para agencia de viajes con animaciones al hacer scroll y galería de fotos.",
-    tags: ["Next.js", "Framer Motion"],
-    image:
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2621&auto=format&fit=crop",
-    github: "#",
-    demo: "#",
+      "Landing page de alta conversión para Fintech. Diseño Dark Mode, Bento Grid y animaciones Framer Motion.",
+    tags: ["React", "Tailwind", "Framer Motion"],
+    image: invoiceFlow,
+    github: "https://github.com/JorgeCb12/invoice-flow-landing",
+    demo: "https://invoice-flow-landing.vercel.app",
   },
+
   {
     id: 3,
     title: "Task Manager App",

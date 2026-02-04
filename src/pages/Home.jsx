@@ -8,7 +8,7 @@ import { BackgroundBoxes } from "../components/ui/BackgroundBoxes";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-slate-950 relative w-full overflow-hidden flex flex-col items-center justify-center rounded-lg">
+    <div className="min-h-screen bg-slate-950 relative w-full overflow-hidden flex flex-col items-center justify-center">
       <div className="absolute hidden md:block inset-0 w-full h-full bg-slate-950 z-0 overflow-hidden">
         <BackgroundBoxes />
       </div>

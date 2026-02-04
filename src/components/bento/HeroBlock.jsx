@@ -33,21 +33,21 @@ const HeroBlock = ({ className }) => {
         </div>
       </div>
 
-      <div className="py-4">
-        <p className="text-gray-300 text-sm leading-relaxed">
-          <span className="text-blue-700 font-bold ">Transformador</span> de
-          ideas en interfaces increíbles, creando experiencias web rápidas y
-          visualmente impactantes
+      <div className="py-4 text-left">
+        <p className="text-gray-300 text-sm lg:text-base leading-relaxed">
+          <span className="text-blue-500 font-bold">Desarrollador</span> de
+          interfaces web claras y modulares, pensadas para escalar y adaptarse a
+          diferentes dispositivos.
         </p>
 
-        <button className="mt-4 text-sm px-4 py-2 bg-white/10 border border-white/20 hover:bg-blue-700 text-white rounded-lg transition-colors">
+        <button className="mt-8 text-sm px-4 py-2 bg-white/10 border border-white/20 hover:bg-blue-700 text-white rounded-lg transition-colors">
           <a href="/CvJorge.pdf" download>
             Download CV
           </a>
         </button>
       </div>
 
-      <div className="flex gap-3 mt-auto w-fit">
+      <div className="flex gap-3 lg:mt-6 mt-4 w-fit">
         <a
           href="https://github.com/JorgeCb12"
           target="_blank"

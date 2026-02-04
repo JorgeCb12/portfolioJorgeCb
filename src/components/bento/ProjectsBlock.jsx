@@ -13,12 +13,15 @@ const projects = [
     tags: [
       {
         icon: () => <SiReact color="#61DAFB" size={18} />,
+        color: "bg-[#61DAFB30]",
       },
       {
         icon: () => <SiTailwindcss color="#06B6D4" size={18} />,
+        color: "bg-[#06B6D430]",
       },
       {
         icon: () => <SiVite color="#646CFF" size={18} />,
+        color: "bg-[#646CFF30]",
       },
     ],
     icons: [SiReact, SiTailwindcss, SiVite],
@@ -32,12 +35,15 @@ const projects = [
     tags: [
       {
         icon: () => <SiReact color="#61DAFB" size={18} />,
+        color: "bg-[#61DAFB30]",
       },
       {
         icon: () => <SiTailwindcss color="#06B6D4" size={18} />,
+        color: "bg-[#06B6D430]",
       },
       {
         icon: () => <SiFramer color="#0055FF" size={18} />,
+        color: "bg-[#0055FF30]",
       },
     ],
     link: "https://invoice-flow-landing.vercel.app",
@@ -53,10 +59,13 @@ const ProjectsBlock = ({ className }) => {
         <h3 className="text-xl font-bold text-gray-200">Proyectos Top</h3>
         <Link
           to="/projects"
-          className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+          className="text-xs group text-gray-400 hover:text-white transition-colors flex items-center gap-1"
         >
           Ver mas
-          <FiArrowRight size={16} />
+          <FiArrowRight
+            size={16}
+            className="group-hover:translate-x-1 transition-transform"
+          />
         </Link>
       </div>
 
@@ -72,7 +81,7 @@ const ProjectsBlock = ({ className }) => {
             gyroscope={true}
             className="rounded-xl overflow-hidden shadow-2xl"
           >
-            <div className="group relative bg-black/40 border border-white/50 hover:border-white/80 transition-all duration-500 overflow-hidden cursor-pointer">
+            <div className="group relative bg-black/40 border border-white/10 hover:border-white/80 transition-all duration-500 overflow-hidden cursor-pointer">
               <div className="h-48 overflow-hidden relative">
                 <img
                   src={project.image}
@@ -84,17 +93,17 @@ const ProjectsBlock = ({ className }) => {
 
               <div className="absolute bottom-0 left-0 w-full px-4 py-6">
                 <div className="flex justify-between items-end">
-                  <div className="flex-1 relative h-16 flex flex-col justify-end overflow-hidden">
+                  <div className="flex-1 relative h-28 flex flex-col justify-end overflow-hidden">
                     <div className="flex justify-between items-center gap-2 mb-2">
-                      <h4 className="text-white font-bold text-lg drop-shadow-md">
+                      <h4 className="text-white mb-3 bg-white/10 backdrop-blur-lg px-2 py-1 rounded-lg font-bold  drop-shadow-md">
                         {project.title}
                       </h4>
-                      <div className="flex gap-2 shrink-0">
+                      <div className="flex gap-2 shrink-0 -mt-3">
                         <a
                           href={project.github}
                           target="_blank"
                           rel="noreferrer"
-                          className="p-2 bg-white/10 backdrop-blur-md rounded-full hover:bg-brand-500 text-white transition-all shadow-xl"
+                          className="p-2 bg-blue-500/50 backdrop-blur-md rounded-full hover:bg-brand-500 text-white transition-all shadow-xl"
                         >
                           <FiGithub size={18} />
                         </a>
@@ -102,7 +111,7 @@ const ProjectsBlock = ({ className }) => {
                           href={project.link}
                           target="_blank"
                           rel="noreferrer"
-                          className="p-2 bg-white/10 backdrop-blur-md rounded-full hover:bg-brand-500 text-white transition-all shadow-xl"
+                          className="p-2 bg-blue-500/50 backdrop-blur-md rounded-full hover:bg-brand-500 text-white transition-all shadow-xl"
                         >
                           <FiExternalLink size={16} />
                         </a>
@@ -112,15 +121,15 @@ const ProjectsBlock = ({ className }) => {
                     <div className="flex flex-wrap gap-2 opacity-100 group-hover:opacity-0 group-hover:-translate-y-4 transition-all duration-500 absolute bottom-0 left-0">
                       {project.tags.map((tag) => (
                         <span
-                          key={tag.name}
-                          className="text-[10px] px-4 py-1  rounded-full bg-white/5 border border-white/10 text-white/80 flex items-center gap-1"
+                          key={tag.color}
+                          className={`text-[10px] ${tag.color} text-white/80 px-4 py-1 rounded-full flex items-center gap-1`}
                         >
                           {tag.icon && <tag.icon size={12} />}
                         </span>
                       ))}
                     </div>
 
-                    <p className="text-gray-300 text-xs -mt-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 line-clamp-2">
+                    <p className="text-gray-300  bg-white/10 backdrop-blur-lg px-2 py-1 rounded-lg text-xs -mt-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 line-clamp-2">
                       {project.desc}
                     </p>
                   </div>

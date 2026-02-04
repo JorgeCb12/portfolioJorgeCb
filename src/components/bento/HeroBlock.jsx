@@ -1,11 +1,12 @@
 import GlassCard from "../ui/GlassCard";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { LuMail, LuMapPin } from "react-icons/lu";
+import Typewriter from "typewriter-effect";
 
 const HeroBlock = ({ className }) => {
   return (
     <GlassCard
-      className={`flex flex-col justify-between h-full w-fit ${className}`}
+      className={`flex flex-col justify-between h-full w-full ${className}`}
     >
       <div className="flex flex-col gap-1 w-fit">
         <div className="relative w-32 h-32  mx-auto md:mx-0 ">
@@ -34,10 +35,24 @@ const HeroBlock = ({ className }) => {
       </div>
 
       <div className="py-4 text-left">
-        <p className="text-gray-300 text-sm lg:text-base leading-relaxed">
-          <span className="text-blue-500 font-bold">Desarrollador</span> de
-          interfaces web claras y modulares, pensadas para escalar y adaptarse a
-          diferentes dispositivos.
+        <p className="text-gray-300 lg:text-base xl:text-lg md:text-sm text-sm leading-relaxed w-full">
+          Desarrollador de interfaces web{" "}
+          <span className="text-blue-500 font-semibold">
+            <Typewriter
+              options={{
+                strings: [
+                  "claras y modulares.",
+                  "pensadas para escalar.",
+                  "totalmente adaptables.",
+                  "optimizadas para distintos dispositivos.",
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 50,
+                deleteSpeed: 30,
+              }}
+            />
+          </span>
         </p>
 
         <button className="mt-8 text-sm px-4 py-2 bg-white/10 border border-white/20 hover:bg-blue-700 text-white rounded-lg transition-colors">

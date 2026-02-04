@@ -123,14 +123,14 @@ const StackBlock = ({ className }) => {
         </h3>
       </div>
 
-      <div className="flex flex-col gap-2 overflow-y-auto pr-2 custom-scrollbar">
+      <div className="flex flex-col  px-6 py-2 gap-2 overflow-y-auto  custom-scrollbar">
         {stackData.map((category, index) => (
           <div key={index} className="flex flex-col gap-2">
             <h4 className="text-gray-500 text-xs font-bold uppercase tracking-wider ml-1">
               {category.title}
             </h4>
 
-            <div className="grid grid-cols-2 gap-2 p-0.5">
+            <div className="grid grid-cols-2 gap-2 p-1">
               {category.item.map((tech, i) => (
                 <div
                   key={i}

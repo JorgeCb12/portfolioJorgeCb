@@ -9,18 +9,21 @@ import invoiceFlow from "../../assets/img/invoiceFlow.png";
 const projects = [
   {
     title: "My Portfolio",
-    desc: "Portafolio personal responsivo creado con React, Tailwind y Vite.",
+    desc: "Portafolio personal responsivo desarrollado con React, Tailwind y Vite, enfocado en mostrar proyectos con un diseño moderno.",
     tags: [
       {
-        icon: () => <SiReact color="#61DAFB" size={18} />,
+        name: "React",
+        icon: () => <SiReact color="#61DAFB" size={16} />,
         color: "bg-[#61DAFB30]",
       },
       {
-        icon: () => <SiTailwindcss color="#06B6D4" size={18} />,
+        name: "Tailwind",
+        icon: () => <SiTailwindcss color="#06B6D4" size={16} />,
         color: "bg-[#06B6D430]",
       },
       {
-        icon: () => <SiVite color="#646CFF" size={18} />,
+        name: "Vite",
+        icon: () => <SiVite color="#646CFF" size={16} />,
         color: "bg-[#646CFF30]",
       },
     ],
@@ -34,15 +37,18 @@ const projects = [
     desc: "Landing page de alta conversión para Fintech. Diseño Dark Mode, Bento Grid y animaciones Framer Motion.",
     tags: [
       {
-        icon: () => <SiReact color="#61DAFB" size={18} />,
+        name: "React",
+        icon: () => <SiReact color="#61DAFB" size={16} />,
         color: "bg-[#61DAFB30]",
       },
       {
-        icon: () => <SiTailwindcss color="#06B6D4" size={18} />,
+        name: "Tailwind",
+        icon: () => <SiTailwindcss color="#06B6D4" size={16} />,
         color: "bg-[#06B6D430]",
       },
       {
-        icon: () => <SiFramer color="#0055FF" size={18} />,
+        name: "Framer",
+        icon: () => <SiFramer color="#0055FF" size={16} />,
         color: "bg-[#0055FF30]",
       },
     ],
@@ -69,7 +75,7 @@ const ProjectsBlock = ({ className }) => {
         </Link>
       </div>
 
-      <div className="flex flex-col gap-6 lg:px-10 md:px-6 px-4 py-4 pt-0">
+      <div className="flex flex-col mt-4 gap-4 2xl:px-10 xl:px-4 lg:px-4  py-2 ">
         {projects.map((project, index) => (
           <Tilt
             key={index}
@@ -81,8 +87,8 @@ const ProjectsBlock = ({ className }) => {
             gyroscope={true}
             className="rounded-xl overflow-hidden shadow-2xl"
           >
-            <div className="group relative bg-black/40 border border-white/10 hover:border-white/80 transition-all duration-500 overflow-hidden cursor-pointer">
-              <div className="h-48 overflow-hidden relative">
+            <div className="group relative p-2 bg-black/40 border border-white/10 hover:border-white/80 transition-all duration-500 overflow-hidden cursor-pointer">
+              <div className="h-52 overflow-hidden relative">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -95,10 +101,10 @@ const ProjectsBlock = ({ className }) => {
                 <div className="flex justify-between items-end">
                   <div className="flex-1 relative h-28 flex flex-col justify-end overflow-hidden">
                     <div className="flex justify-between items-center gap-2 mb-2">
-                      <h4 className="text-white mb-3 bg-white/10 backdrop-blur-lg px-2 py-1 rounded-lg font-bold  drop-shadow-md">
+                      <h4 className="text-white mb-5 bg-white/5 backdrop-blur-sm px-2 py-1 rounded-lg font-bold  drop-shadow-md">
                         {project.title}
                       </h4>
-                      <div className="flex gap-2 shrink-0 -mt-3">
+                      <div className="flex gap-2 shrink-0 -mt-5">
                         <a
                           href={project.github}
                           target="_blank"
@@ -118,18 +124,19 @@ const ProjectsBlock = ({ className }) => {
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap gap-2 opacity-100 group-hover:opacity-0 group-hover:-translate-y-4 transition-all duration-500 absolute bottom-0 left-0">
+                    <div className="flex flex-wrap gap-1 opacity-100 group-hover:opacity-0 group-hover:-translate-y-4 transition-all duration-500 absolute bottom-0 left-0">
                       {project.tags.map((tag) => (
                         <span
                           key={tag.color}
-                          className={`text-[10px] ${tag.color} text-white/80 px-4 py-1 rounded-full flex items-center gap-1`}
+                          className={`text-[10px] ${tag.color} lg:text-sm text-white/80 px-2 py-1 lg:px-3 lg:py-1 2xl:px-4 2xl:py-1 rounded-full flex items-center gap-1`}
                         >
+                          {tag.name}
                           {tag.icon && <tag.icon size={12} />}
                         </span>
                       ))}
                     </div>
 
-                    <p className="text-gray-300  bg-white/10 backdrop-blur-lg px-2 py-1 rounded-lg text-xs -mt-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 line-clamp-2">
+                    <p className="text-gray-300  bg-white/10 backdrop-blur-lg px-4 py-1 pb-4 rounded-lg text-xs -mt-4 lg:pb-5 2xl:pb-4 justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 line-clamp-2">
                       {project.desc}
                     </p>
                   </div>

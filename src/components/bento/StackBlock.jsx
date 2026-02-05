@@ -12,6 +12,8 @@ import {
   SiGithub,
   SiMysql,
   SiCanva,
+  SiHtml5,
+  SiCss3,
 } from "react-icons/si";
 
 const stackData = [
@@ -36,10 +38,22 @@ const stackData = [
     title: "Frontend",
     item: [
       {
+        name: "HTML5",
+        icon: <SiHtml5 size={16} />,
+        color: "text-orange-500",
+        hoverBg: "hover:bg-orange-400/10",
+      },
+      {
+        name: "CSS3",
+        icon: <SiCss3 size={16} />,
+        color: "text-blue-400",
+        hoverBg: "hover:bg-cyan-400/10",
+      },
+      {
         name: "React",
         icon: <SiReact size={16} />,
-        color: "text-cyan-400",
-        hoverBg: "hover:bg-cyan-400/10",
+        color: "text-blue-500",
+        hoverBg: "hover:bg-blue-500/10",
       },
       {
         name: "Tailwind",
@@ -123,10 +137,10 @@ const StackBlock = ({ className }) => {
         </h3>
       </div>
 
-      <div className="flex flex-col  px-6 py-2 gap-2 overflow-y-auto  custom-scrollbar">
+      <div className="flex flex-col  px-2 py-2 md:px-4 md:py-4 lg:px-2 xl:px-4 2xl:px-6 lg:py-2 gap-2 overflow-y-auto  custom-scrollbar">
         {stackData.map((category, index) => (
           <div key={index} className="flex flex-col gap-2">
-            <h4 className="text-gray-500 text-xs font-bold uppercase tracking-wider ml-1">
+            <h4 className="text-gray-400 text-sm font-bold uppercase tracking-wider ml-1">
               {category.title}
             </h4>
 
@@ -149,7 +163,7 @@ const StackBlock = ({ className }) => {
                   >
                     {tech.icon}
                   </span>
-                  <span className="text-[11px] font-medium text-gray-400 group-hover:text-white transition-colors">
+                  <span className="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
                     {tech.name}
                   </span>
                 </div>

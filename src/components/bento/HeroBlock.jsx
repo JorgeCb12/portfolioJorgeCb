@@ -8,8 +8,8 @@ const HeroBlock = ({ className }) => {
     <GlassCard
       className={`flex flex-col justify-between h-full w-full ${className}`}
     >
-      <div className="flex flex-col gap-1 w-fit">
-        <div className="relative w-32 h-32  mx-auto md:mx-0 ">
+      <div className="flex flex-col gap-4 w-fit">
+        <div className="relative w-36 h-36  mx-auto md:mx-0 ">
           <img
             src="/FotoPerfil.webp"
             alt="Jorge CB"
@@ -20,7 +20,7 @@ const HeroBlock = ({ className }) => {
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-bold text-white tracking-tight">
             Jorge CB
           </h1>
@@ -35,16 +35,15 @@ const HeroBlock = ({ className }) => {
       </div>
 
       <div className="py-4 text-left">
-        <p className="text-gray-300 lg:text-base xl:text-lg md:text-sm text-sm leading-relaxed w-full">
+        <p className="text-gray-300 lg:text-sm xl:text-lg md:text-sm text-sm leading-relaxed w-full">
           Desarrollador de interfaces web{" "}
-          <span className="text-blue-500 font-semibold">
+          <span className="text-blue-400 font-semibold">
             <Typewriter
               options={{
                 strings: [
-                  "claras y modulares.",
-                  "pensadas para escalar.",
-                  "totalmente adaptables.",
-                  "optimizadas para distintos dispositivos.",
+                  "CLARAS Y MODULARES.",
+                  "PENSADAS PARA ESCALAR.",
+                  "TOTALMENTE ADAPTABLES.",
                 ],
                 autoStart: true,
                 loop: true,

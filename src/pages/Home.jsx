@@ -20,9 +20,9 @@ const Home = () => {
 
         <ProjectsBlock className="col-span-1 md:col-span-1 lg:col-span-4 xl:col-span-4 row-span-1 h-full p-2" />
 
-        <AboutMeBlock className="col-span-1 md:col-span-1 lg:col-span-4 xl:col-span-4 row-span-1 h-full p-2" />
+        <AboutMeBlock className="col-span-1 md:col-span-1 lg:col-span-4 xl:col-span-3 row-span-1 h-full p-2" />
 
-        <ExperienceBlock className="col-span-1 md:col-span-1 lg:col-span-4 xl:col-span-3 row-span-1 xl:row-span-1 h-full p-2" />
+        <ExperienceBlock className="col-span-1 md:col-span-1 lg:col-span-4 xl:col-span-4 row-span-1 xl:row-span-1 h-full p-2" />
 
         <ContactBlock className="col-span-1 md:col-span-1 lg:col-span-4 xl:col-span-5 row-span-1 h-full p-2" />
       </div>

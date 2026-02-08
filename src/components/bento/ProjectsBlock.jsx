@@ -9,7 +9,7 @@ import invoiceFlow from "../../assets/img/invoiceFlow.png";
 const projects = [
   {
     title: "My Portfolio",
-    desc: "Portafolio personal responsivo desarrollado con React, Tailwind y Vite, enfocado en mostrar proyectos con un diseño moderno.",
+    desc: "Portafolio personal responsivo desarrollado con React, enfocado en mostrar proyectos con un diseño moderno.",
     tags: [
       {
         name: "React",
@@ -27,7 +27,6 @@ const projects = [
         color: "bg-[#646CFF30]",
       },
     ],
-    icons: [SiReact, SiTailwindcss, SiVite],
     link: "https://portfolio-jorgecb.vercel.app/",
     github: "https://github.com/JorgeCb12/portfolioJorgeCb",
     image: portfolioImg,
@@ -39,7 +38,7 @@ const projects = [
       {
         name: "React",
         icon: () => <SiReact color="#61DAFB" size={16} />,
-        color: "bg-[#61DAFB30]",
+        color: "bg-[#61DBFB20]",
       },
       {
         name: "Tailwind",
@@ -75,75 +74,75 @@ const ProjectsBlock = ({ className }) => {
         </Link>
       </div>
 
-      <div className="flex flex-col mt-4 gap-4 2xl:px-10 xl:px-4 lg:px-4  py-2 ">
+      <div className="flex flex-col mt-4 gap-6 px-4 pb-6">
         {projects.map((project, index) => (
           <Tilt
             key={index}
-            tiltMaxAngleX={10}
-            tiltMaxAngleY={10}
+            tiltMaxAngleX={7}
+            tiltMaxAngleY={7}
             perspective={1000}
-            transitionSpeed={1500}
-            scale={1.02}
-            gyroscope={true}
-            className="rounded-xl overflow-hidden shadow-2xl"
+            transitionSpeed={1000}
+            scale={1.01}
+            className="rounded-2xl overflow-hidden shadow-xl"
           >
-            <div className="group relative p-2 bg-black/40 border border-white/10 hover:border-white/80 transition-all duration-500 overflow-hidden cursor-pointer">
-              <div className="h-52 overflow-hidden relative">
+            <div className="group relative bg-neutral-900/80 border border-white/10 hover:border-brand-500/50 transition-all duration-300 overflow-hidden cursor-pointer h-56">
+              <div className="absolute inset-0 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-100"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-40 group-hover:opacity-20"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-60 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
               </div>
 
-              <div className="absolute bottom-0 left-0 w-full px-4 py-6">
-                <div className="flex justify-between items-end">
-                  <div className="flex-1 relative h-28 flex flex-col justify-end overflow-hidden">
-                    <div className="flex justify-between items-center gap-2 mb-2">
-                      <h4 className="text-white mb-5 bg-white/5 backdrop-blur-sm px-2 py-1 rounded-lg font-bold  drop-shadow-md">
-                        {project.title}
-                      </h4>
-                      <div className="flex gap-2 shrink-0 -mt-5">
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="p-2 bg-blue-500/50 backdrop-blur-md rounded-full hover:bg-brand-500 text-white transition-all shadow-xl"
-                        >
-                          <FiGithub size={18} />
-                        </a>
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="p-2 bg-blue-500/50 backdrop-blur-md rounded-full hover:bg-brand-500 text-white transition-all shadow-xl"
-                        >
-                          <FiExternalLink size={16} />
-                        </a>
-                      </div>
-                    </div>
+              <div className="relative h-full p-5 flex flex-col justify-between z-10">
+                <div className="flex justify-between items-start">
+                  <h4 className="text-white text-sm lg:text-sm font-bold tracking-tight bg-black/20 backdrop-blur-md px-3 py-1 rounded-lg border border-white/5">
+                    {project.title}
+                  </h4>
+                  <div className="flex gap-2">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="p-2.5 bg-white/5 backdrop-blur-xl rounded-full border border-white/10 hover:bg-brand-500 hover:border-brand-400 text-white transition-all"
+                    >
+                      <FiGithub size={16} />
+                    </a>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="p-2.5 bg-white/5 backdrop-blur-xl rounded-full border border-white/10 hover:bg-brand-500 hover:border-brand-400 text-white transition-all"
+                    >
+                      <FiExternalLink size={16} />
+                    </a>
+                  </div>
+                </div>
 
-                    <div className="flex flex-wrap gap-1 opacity-100 group-hover:opacity-0 group-hover:-translate-y-4 transition-all duration-500 absolute bottom-0 left-0">
+                <div className="relative h-16 md:h-16 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center gap-2 transition-all duration-300 transform group-hover:translate-y-12 group-hover:opacity-0">
+                    <div className="flex items-center gap-2 px-1 max-w-full py-2 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
                       {project.tags.map((tag) => (
                         <span
-                          key={tag.color}
-                          className={`text-[10px] ${tag.color} lg:text-sm text-white/80 px-2 py-1 lg:px-3 lg:py-1 2xl:px-4 2xl:py-1 rounded-full flex items-center gap-1`}
+                          key={tag.name}
+                          className={`p-1.5  rounded-lg ${tag.color} text-xs md:text-[10px] lg:text-xs text-gray-300 border border-white/5 shadow-inner inline-flex items-center gap-2`}
                         >
-                          {tag.name}
-                          {tag.icon && <tag.icon size={12} />}
+                          {tag.name} {tag.icon()}
                         </span>
                       ))}
                     </div>
+                  </div>
 
-                    <p className="text-gray-300  bg-white/10 backdrop-blur-lg px-4 py-1 pb-4 rounded-lg text-xs -mt-4 lg:pb-5 2xl:pb-4 justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 line-clamp-2">
-                      {project.desc}
-                    </p>
+                  <div className="absolute inset-0 flex items-center transition-all duration-300 transform translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                    <div className="bg-brand-500/10 border border-brand-500/20 backdrop-blur-md p-2 rounded-xl">
+                      <p className="text-gray-200 text-xs leading-relaxed line-clamp-2">
+                        {project.desc}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <div className="absolute inset-0 border border-white/0 group-hover:border-white/20 rounded-xl transition-all duration-500 pointer-events-none"></div>
             </div>
           </Tilt>
         ))}

@@ -74,7 +74,7 @@ const ProjectsBlock = ({ className }) => {
         </Link>
       </div>
 
-      <div className="flex flex-col mt-4 gap-6 px-4 pb-6">
+      <div className="flex flex-col mt-4 gap-6 px-4 lg:px-8 pb-6 ">
         {projects.map((project, index) => (
           <Tilt
             key={index}

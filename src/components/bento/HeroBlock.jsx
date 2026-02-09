@@ -1,14 +1,16 @@
 import GlassCard from "../ui/GlassCard";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { LuMail, LuMapPin } from "react-icons/lu";
+import { LuDownload } from "react-icons/lu";
 import Typewriter from "typewriter-effect";
+import { Button } from "../ui/MovingBorder";
 
 const HeroBlock = ({ className }) => {
   return (
     <GlassCard
       className={`flex flex-col justify-between h-full w-full ${className}`}
     >
-      <div className="flex flex-col gap-4 w-fit">
+      <div className="flex flex-col gap-6 w-fit">
         <div className="relative w-36 h-36  mx-auto md:mx-0 ">
           <img
             src="/FotoPerfil.webp"
@@ -34,10 +36,10 @@ const HeroBlock = ({ className }) => {
         </div>
       </div>
 
-      <div className="py-4 text-left">
-        <p className="text-gray-300 lg:text-sm xl:text-lg md:text-sm text-sm leading-relaxed w-full">
+      <div className="py-6 text-left flex flex-col gap-4">
+        <p className="text-gray-300 lg:text-base xl:text-xl md:text-sm text-sm leading-relaxed w-full">
           Desarrollador de interfaces web{" "}
-          <span className="text-blue-400 font-semibold">
+          <span className="text-blue-500 font-semibold">
             <Typewriter
               options={{
                 strings: [
@@ -47,18 +49,25 @@ const HeroBlock = ({ className }) => {
                 ],
                 autoStart: true,
                 loop: true,
-                delay: 50,
+                delay: 60,
                 deleteSpeed: 30,
               }}
             />
           </span>
         </p>
 
-        <button className="mt-8 text-sm px-4 py-2 bg-white/10 border border-white/20 hover:bg-blue-700 text-white rounded-lg transition-colors">
-          <a href="/CvJorge.pdf" download>
-            Download CV
+        <Button
+          borderRadius="1.75rem"
+          className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+        >
+          <a
+            href="/CvJorge.pdf"
+            className="text-sm font-semibold flex items-center "
+            download
+          >
+            Descargar CV <LuDownload size={16} className="ml-2" />
           </a>
-        </button>
+        </Button>
       </div>
 
       <div className="flex gap-3 lg:mt-6 mt-4 w-fit">

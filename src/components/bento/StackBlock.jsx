@@ -150,7 +150,7 @@ const StackBlock = ({ className }) => {
                   key={i}
                   className={`
                     group 
-                    flex items-center gap-2 
+                    flex items-center gap-2 7
                     p-1.5 rounded-lg 
                     bg-white/5 border border-white/10 
                     ${tech.hoverBg} hover:border-white/30

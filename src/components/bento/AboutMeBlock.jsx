@@ -1,12 +1,5 @@
-import React from "react";
 import GlassCard from "../ui/GlassCard";
-import {
-  FaUser,
-  FaLightbulb,
-  FaRocket,
-  FaCode,
-  FaDraftingCompass,
-} from "react-icons/fa";
+import { FaLightbulb, FaRocket } from "react-icons/fa";
 
 const AboutMeBlock = ({ className }) => {
   return (

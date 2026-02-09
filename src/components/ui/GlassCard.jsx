@@ -9,26 +9,58 @@ const GlassCard = ({ children, className = "" }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{
-        duration: 0.9,
+        duration: 0.8,
         ease: "backInOut",
       }}
       className={`
         relative overflow-hidden
         rounded-3xl 
-        border border-white/40 
-        bg-neutral-900/5  
-        backdrop-blur-sm   
+        bg-white/[0.03]
+        backdrop-blur-md
         shadow-lg
-        transition-all duration-300 
+        transition-all duration-400 
         hover:scale-[1.01] 
         hover:shadow-xl
-        hover:border-white/20
         pointer-events-none 
         ${className} 
       `}
     >
-      <div className="absolute -top-10 -right-10 w-32 h-32 bg-black/10 blur-3xl rounded-full pointer-events-none"></div>
-      <div className="h-full w-full relative z-10 pointer-events-auto">
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          padding: "2px",
+          maskImage:
+            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMask:
+            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          maskComposite: "exclude",
+          WebkitMaskComposite: "destination-out",
+        }}
+      >
+        <MotionDiv
+          animate={{
+            rotate: [0, 360],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          style={{
+            background:
+              "conic-gradient(from 0deg, transparent 40%, #3B82F650 100%)",
+            width: "200%",
+            height: "200%",
+            left: "-50%",
+            top: "-50%",
+          }}
+          className="absolute"
+        />
+      </div>
+
+      <div className="absolute -top-10 -right-10 w-32 h-32 bg-purple-500/5 blur-3xl rounded-full pointer-events-none z-10"></div>
+
+      <div className="h-full w-full relative z-20 pointer-events-auto p-2 text-white">
         {children}
       </div>
     </MotionDiv>

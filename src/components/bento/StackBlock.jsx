@@ -137,10 +137,10 @@ const StackBlock = ({ className }) => {
         </h3>
       </div>
 
-      <div className="flex flex-col  px-2 py-2 md:px-4 md:py-4 lg:px-2 xl:px-4 2xl:px-6 lg:py-2 gap-2 overflow-y-auto  custom-scrollbar">
+      <div className="flex flex-col  px-2 py-2 md:px-4 md:py-4 lg:px-2 xl:px-4 2xl:px-4 lg:py-2 gap-2 overflow-y-auto  custom-scrollbar">
         {stackData.map((category, index) => (
           <div key={index} className="flex flex-col gap-2">
-            <h4 className="text-gray-400 text-sm font-bold uppercase tracking-wider ml-1">
+            <h4 className="text-gray-400 text-sm xl:text-xs 2xl:text-sm font-bold uppercase tracking-wider ml-1">
               {category.title}
             </h4>
 
@@ -159,11 +159,11 @@ const StackBlock = ({ className }) => {
                   `}
                 >
                   <span
-                    className={`text-lg ${tech.color} transition-transform group-hover:scale-110`}
+                    className={` ${tech.color} transition-transform group-hover:scale-110`}
                   >
                     {tech.icon}
                   </span>
-                  <span className="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
+                  <span className="text-sm xl:text-xs 2xl:text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
                     {tech.name}
                   </span>
                 </div>

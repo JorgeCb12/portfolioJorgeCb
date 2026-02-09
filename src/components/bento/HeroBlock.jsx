@@ -11,7 +11,7 @@ const HeroBlock = ({ className }) => {
       className={`flex flex-col justify-between h-full w-full ${className}`}
     >
       <div className="flex flex-col gap-6 w-fit">
-        <div className="relative w-36 h-36  mx-auto md:mx-0 ">
+        <div className="relative w-36 h-36 xl:w-32 xl:h-32 2xl:w-38 2xl:h-38 mx-auto md:mx-0 ">
           <img
             src="/FotoPerfil.webp"
             alt="Jorge CB"
@@ -23,13 +23,13 @@ const HeroBlock = ({ className }) => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h1 className="text-2xl font-bold text-white tracking-tight">
+          <h1 className="text-2xl xl:text-xl 2xl:text-2xl font-bold text-white tracking-tight">
             Jorge CB
           </h1>
-          <p className="text-gray-400 font-medium text-base">
+          <p className="text-gray-400 font-medium text-base xl:text-sm 2xl:text-base">
             Frontend Developer
           </p>
-          <div className="flex items-center gap-2 mt-2 text-xs text-gray-500">
+          <div className="flex items-center gap-2 mt-2 text-xs text-gray-500 xl:text-sm 2xl:text-base">
             <LuMapPin size={14} />
             <span>Colombia</span>
           </div>
@@ -37,7 +37,7 @@ const HeroBlock = ({ className }) => {
       </div>
 
       <div className="py-6 text-left flex flex-col gap-4">
-        <p className="text-gray-300 lg:text-base xl:text-xl md:text-sm text-sm leading-relaxed w-full">
+        <p className="text-gray-300 lg:text-base 2xl:text-lg xl:text-base md:text-sm text-sm leading-relaxed w-full">
           Desarrollador de interfaces web{" "}
           <span className="text-blue-500 font-semibold">
             <Typewriter
@@ -70,7 +70,7 @@ const HeroBlock = ({ className }) => {
         </Button>
       </div>
 
-      <div className="flex gap-3 lg:mt-6 mt-4 w-fit">
+      <div className="flex gap-3 mt-4 w-fit">
         <a
           href="https://github.com/JorgeCb12"
           target="_blank"

@@ -60,7 +60,7 @@ const projects = [
 const ProjectsBlock = ({ className }) => {
   return (
     <GlassCard className={`p-0 ${className}`}>
-      <div className="p-6 pb-2 flex justify-between items-center">
+      <div className="p-6 flex justify-between items-center">
         <h3 className="text-xl font-bold text-gray-200">Proyectos Top</h3>
         <Link
           to="/projects"
@@ -74,7 +74,7 @@ const ProjectsBlock = ({ className }) => {
         </Link>
       </div>
 
-      <div className="flex flex-col mt-4 gap-6 px-4 lg:px-8 pb-6 ">
+      <div className="flex flex-col  gap-4 px-4 lg:px-2 xl:px-4 2xl:px-8 ">
         {projects.map((project, index) => (
           <Tilt
             key={index}
@@ -85,7 +85,7 @@ const ProjectsBlock = ({ className }) => {
             scale={1.01}
             className="rounded-2xl overflow-hidden shadow-xl"
           >
-            <div className="group relative bg-neutral-900/80 border border-white/10 hover:border-brand-500/50 transition-all duration-300 overflow-hidden cursor-pointer h-56">
+            <div className="group relative bg-neutral-900/80 border border-white/10 hover:border-brand-500/50 transition-all duration-300 overflow-hidden cursor-pointer h-56 xl:h-52 2xl:h-56">
               <div className="absolute inset-0 overflow-hidden">
                 <img
                   src={project.image}

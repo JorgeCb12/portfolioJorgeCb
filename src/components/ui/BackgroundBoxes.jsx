@@ -1,9 +1,8 @@
+import React from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { cn } from "../../lib/cn";
-
-const rows = new Array(70).fill(1);
-const cols = new Array(70).fill(1);
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const colors = [
   "#7dd3fc",
@@ -18,13 +17,21 @@ const colors = [
 ];
 
 export const BoxesCore = ({ className, ...rest }) => {
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+
+  const rowCount = isDesktop ? 70 : 20;
+  const colCount = isDesktop ? 70 : 20;
+
+  const rows = new Array(rowCount).fill(1);
+  const cols = new Array(colCount).fill(1);
+
   return (
     <div
       style={{
-        transform: `translate(-25%, -40%) skewX(-48deg) skewY(14deg) scale(0.8) rotate(0deg) translateZ(0)`,
+        transform: `translate(-25%, -40%) skewX(-48deg) skewY(14deg) scale(${isDesktop ? 0.8 : 1.2}) rotate(0deg) translateZ(0)`,
       }}
       className={cn(
-        "absolute left-0 top-0 flex w-[200vw] h-[200vh] z-0 pointer-events-none",
+        "absolute left-0 top-0 flex w-[200vw] h-[200vh] z-0 pointer-events-none will-change-transform",
         className,
       )}
       {...rest}
@@ -36,17 +43,21 @@ export const BoxesCore = ({ className, ...rest }) => {
         >
           {cols.map((_, j) => (
             <motion.div
-              whileHover={{
-                backgroundColor: colors[(i + j) % colors.length],
-                transition: { duration: 0 },
-              }}
+              whileHover={
+                isDesktop
+                  ? {
+                      backgroundColor: colors[(i + j) % colors.length],
+                      transition: { duration: 0 },
+                    }
+                  : {}
+              }
               animate={{
                 transition: { duration: 2 },
               }}
               key={`col` + j}
               className="w-16 h-8 border-r border-t border-slate-700/80 relative pointer-events-auto"
             >
-              {j % 2 === 0 && i % 2 === 0 ? (
+              {isDesktop && j % 2 === 0 && i % 2 === 0 ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

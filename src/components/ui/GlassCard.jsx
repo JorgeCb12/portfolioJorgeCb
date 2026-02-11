@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const MotionDiv = motion.div;
 
 const GlassCard = ({ children, className = "" }) => {
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+
   return (
     <MotionDiv
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{
-        duration: 0.8,
+        duration: 0.9,
         ease: "backInOut",
       }}
       className={`
@@ -18,17 +21,18 @@ const GlassCard = ({ children, className = "" }) => {
         bg-white/[0.03]
         backdrop-blur-md
         shadow-lg
-        transition-all duration-400 
+        transition-all duration-300 
         hover:scale-[1.01] 
         hover:shadow-xl
         pointer-events-none 
+        will-change-transform
         ${className} 
       `}
     >
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          padding: "2px",
+          padding: "1.5px",
           maskImage:
             "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
           WebkitMask:
@@ -38,9 +42,7 @@ const GlassCard = ({ children, className = "" }) => {
         }}
       >
         <MotionDiv
-          animate={{
-            rotate: [0, 360],
-          }}
+          animate={isDesktop ? { rotate: [0, 360] } : {}}
           transition={{
             duration: 8,
             repeat: Infinity,
@@ -48,13 +50,13 @@ const GlassCard = ({ children, className = "" }) => {
           }}
           style={{
             background:
-              "conic-gradient(from 0deg, transparent 40%, #3B82F650 100%)",
+              "conic-gradient(from 0deg, transparent 60%, #8b5cf680 100%)",
             width: "200%",
             height: "200%",
             left: "-50%",
             top: "-50%",
           }}
-          className="absolute"
+          className="absolute will-change-transform"
         />
       </div>
 

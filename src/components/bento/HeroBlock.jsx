@@ -10,33 +10,34 @@ const HeroBlock = ({ className }) => {
     <GlassCard
       className={`flex flex-col justify-between h-full w-full ${className}`}
     >
-      <div className="flex flex-col gap-6 w-fit">
+      <div className="flex flex-col gap-6 w-full border-b-2 border-white/10 pb-3">
         <div className="relative w-36 h-36 xl:w-32 xl:h-32 2xl:w-38 2xl:h-38 mx-auto md:mx-0 ">
           <img
             src="/FotoPerfil.webp"
             alt="Jorge CB"
-            className="w-full h-full rounded-full object-cover border-2 border-white/20 shadow-lg"
+            className="w-full h-full rounded-full object-cover shadow-lg"
           />
           <div className="absolute bottom-0 right-3 w-6 h-6 bg-neutral-900 rounded-full flex items-center justify-center border border-white/10">
             <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3">
           <h1 className="text-2xl xl:text-xl 2xl:text-2xl font-bold text-white tracking-tight">
-            Jorge CB
+            Jorge Corrales B.
           </h1>
-          <p className="text-gray-400 font-medium text-base xl:text-sm 2xl:text-base">
-            Frontend Developer
+          <p className="text-gray-200 font-medium text-base xl:text-sm 2xl:text-base">
+            I'm a{" "}
+            <span className="text-blue-500 font-bold">Frontend Developer</span>
           </p>
-          <div className="flex items-center gap-2 mt-2 text-xs text-gray-500 xl:text-sm 2xl:text-base">
-            <LuMapPin size={14} />
+          <div className="flex items-center gap-2 mt-1 text-xs text-gray-500 xl:text-sm 2xl:text-base">
+            <LuMapPin size={16} className="text-white -mt-0.5" />
             <span>Colombia</span>
           </div>
         </div>
       </div>
 
-      <div className="py-6 text-left flex flex-col gap-4">
+      <div className="py-6 text-left flex flex-col gap-2">
         <p className="text-gray-300 lg:text-base 2xl:text-lg xl:text-base md:text-sm text-sm leading-relaxed w-full">
           Desarrollador de interfaces web{" "}
           <span className="text-blue-500 font-semibold">

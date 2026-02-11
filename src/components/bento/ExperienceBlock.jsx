@@ -49,7 +49,7 @@ const Experience = ({ className }) => {
       <div className="relative pl-4">
         <div className="absolute left-3 top-1 bottom-1 w-[2px] bg-gradient-to-b from-blue-400/40 via-white/10 to-pink-400/30" />
 
-        <div className="space-y-5">
+        <div className="space-y-4">
           {jobs.map((job) => (
             <div key={job.id} className="relative">
               <div

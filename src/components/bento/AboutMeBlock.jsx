@@ -11,40 +11,40 @@ const AboutMeBlock = ({ className }) => {
       <div className="p-6 flex flex-col h-full">
         <div className="flex items-center gap-3 mb-8">
           <h3 className="text-xl font-bold text-white tracking-tight">
-            Mi ADN <span className="text-brand-500">Dev</span>
+            Sobre mí
           </h3>
         </div>
 
         <div className="space-y-4 mb-8">
-          <p className="text-gray-300 text-sm leading-relaxed">
+          <p className="text-gray-300 text-base leading-relaxed">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 font-bold">
               Arquitecto de interfaces.
             </span>{" "}
             No solo escribo código, diseño flujos que se sienten naturales. Mi
             ecosistema es{" "}
-            <span className="text-blue-400 font-medium">Node.js</span> y{" "}
-            <span className="text-purple-400 font-medium">React</span>, donde la
+            <span className="text-green-500 font-semibold">Node.js</span> y{" "}
+            <span className="text-blue-500 font-semibold">React</span>, donde la
             lógica y la estética convergen.
           </p>
 
-          <p className="text-gray-400 text-xs leading-relaxed border-l-2 border-brand-500/30 pl-4 py-1 italic">
+          <p className="text-gray-400 text-sm leading-relaxed border-l-2 border-brand-500/30 pl-4 py-2 italic">
             "Mi meta es transformar la complejidad técnica en simplicidad
             visual."
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-3 mt-auto">
+        <div className="grid grid-cols-1 gap-4 mt-auto">
           <div className="group/card relative overflow-hidden bg-white/[0.03] border border-white/5 p-3 rounded-xl transition-all duration-500 hover:border-brand-500/30 hover:bg-white/[0.06]">
             <div className="flex items-center gap-4">
               <div className="p-2 bg-yellow-500/10 rounded-lg text-yellow-500 group-hover/card:scale-110 transition-transform">
                 <FaLightbulb size={16} />
               </div>
-              <div>
+              <div className="flex flex-col gap-2">
                 <p className="text-white font-bold text-xs">
-                  Pensamiento Lateral
+                  Creativo e innovador
                 </p>
                 <p className="text-gray-500 text-[10px] uppercase tracking-tighter">
-                  Soluciones no convencionales
+                  Diseño con propósito
                 </p>
               </div>
             </div>
@@ -55,12 +55,10 @@ const AboutMeBlock = ({ className }) => {
               <div className="p-2 bg-red-500/10 rounded-lg text-red-500 group-hover/card:scale-110 transition-transform">
                 <FaRocket size={16} />
               </div>
-              <div>
-                <p className="text-white font-bold text-xs">
-                  Evolución Constante
-                </p>
+              <div className="flex flex-col gap-2">
+                <p className="text-white font-bold text-xs">Adaptabilidad</p>
                 <p className="text-gray-500 text-[10px] uppercase tracking-tighter">
-                  Aprendizaje acelerado
+                  Ajuste a cualquier entorno
                 </p>
               </div>
             </div>
